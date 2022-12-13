@@ -1,0 +1,27 @@
+@layout('layouts/MainLayout')
+
+
+@section('body')
+<main>
+  <div class="container" style="width:40%">
+    <h1>Login</h1>
+    <form style="justify-content:center" method="post" >
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input name="email" type="email" class="form-control input-sm" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+      </div>
+      <div class="mb-3 " >
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input name= "password" type="password"  class="form-control input-sm" id="exampleInputPassword1">
+      </div>
+        @if(errorMessage)
+        <div>
+          {{errorMessage}}
+        </div>
+        @endif
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+  </div>
+</main>
+@end
